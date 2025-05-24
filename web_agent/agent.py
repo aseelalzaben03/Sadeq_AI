@@ -147,28 +147,3 @@ class WebVerifier:
             return " تعذر قراءة محتوى الرابط"
         return self.verify_with_web(content)
 
-# ---------------- Gradio UI ----------------
-verifier = WebVerifier()
-
-def verify_news(input_text, input_url):
-    if input_url.strip():
-        return verifier.verify_from_url(input_url)
-    elif input_text.strip():
-        return verifier.verify_with_web(input_text)
-    else:
-        return "يرجى إدخال نص أو رابط للتحقق."
-
-with gr.Blocks(title="تحقق من الأخبار - عربي / إنجليزي") as demo:
-    gr.Markdown("## تحقق من الأخبار الكاذبة بالعربية أو الإنجليزية")
-
-    with gr.Row():
-        news_text = gr.Textbox(label=" نص الخبر", placeholder="أدخل نص الخبر...")
-        news_url = gr.Textbox(label=" رابط URL", placeholder="أو أدخل رابط المقال...")
-
-    verify_btn = gr.Button(" تحقق")
-    result_output = gr.Textbox(label="النتيجة")
-
-    verify_btn.click(fn=verify_news, inputs=[news_text, news_url], outputs=result_output)
-
-demo.launch()
-
