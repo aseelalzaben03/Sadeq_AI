@@ -2,7 +2,7 @@ streamlit
 beautifulsoup4
 googlesearch-python
 transformers==4.40.1
-torch==2.0.1  # جرب تثبيت نسخة محددة مستقرة
+torch>=2.5.0
 protobuf==3.20.3
 requests
 sentencepiece==0.1.99
