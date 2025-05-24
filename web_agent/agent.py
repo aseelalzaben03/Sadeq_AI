@@ -5,7 +5,7 @@ from googlesearch import search
 import torch
 
 # تحميل نموذج mT5 من HuggingFace
-tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
+tokenizer = AutoTokenizer.from_pretrained("google/mt5-small", use_fast=False)
 model = AutoModelForSeq2SeqLM.from_pretrained("google/mt5-small")
 
 def summarize_text(text):
