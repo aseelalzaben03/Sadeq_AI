@@ -1,7 +1,11 @@
-
 streamlit
-transformers
-torch
-requests
 beautifulsoup4
 googlesearch-python
+transformers==4.40.1
+torch>=2.0.0
+sentencepiece==0.1.99
+protobuf==3.20.3
+streamlit
+requests
+
+
