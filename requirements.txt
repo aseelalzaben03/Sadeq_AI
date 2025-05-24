@@ -1,16 +1,12 @@
-# تأكد من ترقية pip setuptools wheel قبل التثبيت
-pip>=23.0.1
-setuptools>=67.0.0
-wheel>=0.40.0
-
 streamlit
 beautifulsoup4
 googlesearch-python
 transformers==4.40.1
-torch>=2.0.0
-sentencepiece==0.1.99
+torch==2.0.1  # جرب تثبيت نسخة محددة مستقرة
 protobuf==3.20.3
 requests
+sentencepiece==0.1.99
+
 
 
 
